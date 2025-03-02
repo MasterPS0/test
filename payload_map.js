@@ -96,17 +96,13 @@ const payload_map = [
 	{
         displayTitle: "sflash",
         description: "PS5 IDPS",
+		document.getElementById('output25Bild').src = './img/01.png',
         fileName: "sflash_test.elf",
         author: "LightningMods",
         projectSource: "",
         binarySource: "",
         version: "5.10",
 		toPort: 9021
-        var x = document.createElement("IMG"),
-        x.setAttribute("src", "img/01.png"),
-        x.setAttribute("width", "64"),
-        x.setAttribute("height", "64"),
-        document.body.appendChild(x);
     },
     {
         displayTitle: "Byepervisor HEN",
