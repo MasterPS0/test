@@ -101,13 +101,13 @@ a:focus {
 }
 
 
-#payloads-0 {
+#payloads-view-0 {
     background-image: url(img/01.png);
     background-size: 64px 64px;
     background-repeat: no-repeat;
 }
 
-#payloads-1 {
+#payloads-view-1 {
     background-image: url(img/02.png);
     background-size: 64px 64px;
     background-repeat: no-repeat;
