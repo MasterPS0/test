@@ -98,13 +98,11 @@ a:focus {
 
 #payloads-view .btn {
     width: 100% !important;
-    background-size: 64px 64px;
-    background-repeat: no-repeat;
 }
 
-#etaHEN20b {
+
+#payload-0 .btn {
     width: 100% !important;
-	title: etaHEN20b;
     background-image: url(img/01.png);
     background-size: 64px 64px;
     background-repeat: no-repeat;
