@@ -96,7 +96,6 @@ const payload_map = [
 	{
         displayTitle: "sflash",
         description: "PS5 IDPS",
-		document.getElementById('output25Bild').src = './img/01.png',
         fileName: "sflash_test.elf",
         author: "LightningMods",
         projectSource: "",
