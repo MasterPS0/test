@@ -101,13 +101,37 @@ a:focus {
 }
 
 
-#payloads0 .btn {
+#payloads-view-0{
     background-image: url(img/01.png);
     background-size: 64px 64px;
     background-repeat: no-repeat;
 }
 
-#payloads1 .btn {
+#payloads-view-1 {
+    background-image: url(img/02.png);
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+}
+
+#payloads-view0{
+    background-image: url(img/01.png);
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+}
+
+#payloads-view1 {
+    background-image: url(img/02.png);
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+}
+
+#payloads-view0 .btn {
+    background-image: url(img/01.png);
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+}
+
+#payloads-view1 .btn {
     background-image: url(img/02.png);
     background-size: 64px 64px;
     background-repeat: no-repeat;

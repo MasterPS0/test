@@ -90,7 +90,7 @@ const payload_map = [
         author: "AlAzif",
         projectSource: "",
         binarySource: "",
-        version: "5.10",
+        version: "0.01",
 		toPort: 9021
     },
 	{
@@ -100,7 +100,7 @@ const payload_map = [
         author: "LightningMods",
         projectSource: "",
         binarySource: "",
-        version: "5.10",
+        version: "0.01",
 		toPort: 9021
     },
     {
