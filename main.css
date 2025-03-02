@@ -101,9 +101,14 @@ a:focus {
 }
 
 
-#payload-0 .btn {
-    width: 100% !important;
+#payload-0 {
     background-image: url(img/01.png);
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+}
+
+#payload-1 {
+    background-image: url(img/02.png);
     background-size: 64px 64px;
     background-repeat: no-repeat;
 }
