@@ -98,16 +98,6 @@ a:focus {
 
 #payloads-view .btn {
     width: 100% !important;
-}
-
-
-#payloads-view-0.btn {
-    background-image: url(img/01.png);
-    background-size: 64px 64px;
-    background-repeat: no-repeat;
-}
-
-#payloads-view-01.btn {
     background-image: url(img/02.png);
     background-size: 64px 64px;
     background-repeat: no-repeat;
