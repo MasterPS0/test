@@ -119,7 +119,7 @@ a:focus {
     align-content: start;
 }
 
-#payloads-view .btn {
+#payloads-view .btn .btn0 {
     width: 100% !important;
 
 }
