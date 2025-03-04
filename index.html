@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> PS5 UMTX Jailbreak  </title>
+    <title> PS5 UMTX Jailbreak   <p class="text-center" id="top-bar-text">  Current firmware: <span class="fw-bold" id="current-fw"></span></p></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
 
@@ -23,7 +23,6 @@
 
     <!-- Row 2 -->
     <div id="main-content">
-	
         <div id="pre-jb-view" class="d-flex align-items-center justify-content-center flex-direction-column selected">
             <a tabindex="0" class="btn fw-bold" id="run-jb" onclick="run()"><img src="img/01.png" width="64" height="64" alt=""><br>Jailbreak</a>
             <a tabindex="0" class="btn" style="padding: 0.5rem 2rem; font-size: 1rem;" id="run-wk-only" onclick="run(true)"><img src="img/02.png" width="64" height="64" alt=""><br>Webkit-only (sender)</a>
@@ -62,9 +61,7 @@
             <span class="ml-2">Redirect</span>
         </div>
     </div>
-
-	<script>javascript:(function () { var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();</script>
-	
+		<script>javascript:(function () { var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();</script>
     <script src="int64.js"></script>
     <script src="rop.js"></script>
     <script src="exploit.js"></script>
@@ -75,8 +72,6 @@
     <script src="payload_map.js"></script>
     
     <script>
-	
-	
         addEventListener('unhandledrejection', (event) => {
             const reason = event.reason;
             // We log the line and column numbers as well since some exceptions (like
