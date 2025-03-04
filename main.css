@@ -59,6 +59,29 @@ a:focus {
 
 }
 
+.btn0 {
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.2rem;
+    cursor: pointer;
+    line-height: 2.5rem;
+    min-width: 5rem;
+    border-radius: 1rem;
+    width: 50%;
+    background-color: var(--primary-color);
+    border: none;
+    color: #fff;
+    font-size: 1.3rem;
+    transition: background-color 0.3s ease-in-out;
+    box-sizing: border-box;
+	background-image: url(img/02.png);
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+
+}
+
 .btn:hover {
     background-color: #c2c2c2;
     color: #303030;
@@ -101,7 +124,7 @@ a:focus {
 
 }
 
-#payloads-view .etaHEN20b {
+#payloads-view .btn0 {
     width: 100% !important;
     background-image: url(img/02.png);
     background-size: 64px 64px;
@@ -110,31 +133,11 @@ a:focus {
 }
 
 .payload-btn-title {
-	content:"etaHEN20b"
     line-height: 2.5rem;
     font-weight: bold;
     font-size: 1.25rem;
     padding: 0;
     margin: 0;
-}
-
-.payload-btn-title .etaHEN20b{
-	content:"etaHEN20b"
-    background-image: url(img/02.png);
-    background-size: 64px 64px;
-    background-repeat: no-repeat;
-}
-
-.etaHEN20b{
-    background-image: url(img/02.png);
-    background-size: 64px 64px;
-    background-repeat: no-repeat;
-}
-
-#etaHEN20b{
-    background-image: url(img/02.png);
-    background-size: 64px 64px;
-    background-repeat: no-repeat;
 }
 
 .payload-btn-description {
