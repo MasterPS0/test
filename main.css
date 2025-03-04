@@ -102,6 +102,7 @@ a:focus {
 }
 
 .payload-btn-title {
+	content:"etaHEN20b"
     line-height: 2.5rem;
     font-weight: bold;
     font-size: 1.25rem;
@@ -110,18 +111,21 @@ a:focus {
 }
 
 .payload-btn-title .etaHEN20b{
+	content:"etaHEN20b"
     background-image: url(img/02.png);
     background-size: 64px 64px;
     background-repeat: no-repeat;
 }
 
 .etaHEN20b{
+	content:"etaHEN20b"
     background-image: url(img/02.png);
     background-size: 64px 64px;
     background-repeat: no-repeat;
 }
 
 #etaHEN20b{
+	content:"etaHEN20b"
     background-image: url(img/02.png);
     background-size: 64px 64px;
     background-repeat: no-repeat;
