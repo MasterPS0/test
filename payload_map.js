@@ -65,7 +65,6 @@ const payload_map = [
     },
 	{
         displayTitle: "etaHEN20b",
-		icon:""
         description: "AIO HEN",
         fileName: "etaHEN20b.bin",
         author: "LightningMods",

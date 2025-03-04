@@ -109,11 +109,6 @@ a:focus {
     margin: 0;
 }
 
-.payload-btn-icon {
-    background-image: url(img/01.png);
-    background-size: 64px 64px;
-    background-repeat: no-repeat;
-}
 
 .payload-btn-description {
     color: var(--text-color-secondary);
