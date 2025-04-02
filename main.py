@@ -4,6 +4,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 
 def load_ip_config():
+    """تحميل إعدادات الـ IP و Port من ملف `ip.ini`."""
     try:
         with open("ip.ini", "r") as f:
             ipbox.delete(0, tk.END)
@@ -11,35 +12,47 @@ def load_ip_config():
             portbox.delete(0, tk.END)
             portbox.insert(0, f.readline().strip())
     except FileNotFoundError:
-        pass
+        messagebox.showwarning("Warning", "No previous configuration found.")
+    except Exception as e:
+        messagebox.showerror("Error", f"Failed to load IP config: {str(e)}")
 
 def save_ip_config():
-    with open("ip.ini", "w") as f:
-        f.write(ipbox.get() + "\n" + portbox.get() + "\n")
-    messagebox.showinfo("Info", "Save IP")
+    """حفظ إعدادات الـ IP و Port في ملف `ip.ini`."""
+    try:
+        with open("ip.ini", "w") as f:
+            f.write(ipbox.get() + "\n" + portbox.get() + "\n")
+        messagebox.showinfo("Info", "IP Configuration Saved")
+    except Exception as e:
+        messagebox.showerror("Error", f"Failed to save IP config: {str(e)}")
 
 def execute_socat(filename):
-    batch_content = f"@echo off\nsocat.exe -t 99999999 - TCP:{ipbox.get()}:{portbox.get()} < {filename}\npause"
-    with open("ps5.bat", "w") as f:
-        f.write(batch_content)
-    subprocess.run(["ps5.bat"], shell=True)
+    """تشغيل أوامر `socat` باستخدام ملف باتش."""
+    try:
+        batch_content = f"@echo off\nsocat.exe -t 99999999 - TCP:{ipbox.get()}:{portbox.get()} < {filename}\npause"
+        with open("ps5.bat", "w") as f:
+            f.write(batch_content)
+        subprocess.run(["ps5.bat"], shell=True, check=True)
+    except Exception as e:
+        messagebox.showerror("Error", f"Failed to execute socat: {str(e)}")
 
 def select_file():
+    """اختيار ملف من خلال مربع الحوار."""
     file_path = filedialog.askopenfilename(filetypes=[("ELF BIN Files", "*.elf;*.bin")])
     if file_path:
         file_entry.delete(0, tk.END)
         file_entry.insert(0, file_path)
 
 def send_payload():
+    """إرسال الحمولة (payload) المحددة عبر `socat`."""
     try:
         batch_content = f"@echo off\nsocat.exe -t 99999999 - TCP:{ipbox.get()}:{portbox.get()} < {file_entry.get()}\npause"
         with open("payload.bat", "w") as f:
             f.write(batch_content)
-        subprocess.run(["payload.bat"], shell=True)
+        subprocess.run(["payload.bat"], shell=True, check=True)
     except Exception as e:
-        messagebox.showerror("Error", str(e))
+        messagebox.showerror("Error", f"Failed to send payload: {str(e)}")
 
-# GUI Setup
+# إعداد واجهة المستخدم
 root = tk.Tk()
 root.title("PS Loaders")
 
@@ -53,15 +66,19 @@ portbox.grid(row=1, column=1)
 
 tk.Button(root, text="Save IP", command=save_ip_config).grid(row=2, columnspan=2)
 
+# الأزرار لإرسال الحمولة
 tk.Button(root, text="Send kstuff.elf", command=lambda: execute_socat("payloads/kstuff.elf")).grid(row=3, columnspan=2)
 tk.Button(root, text="Send ftpsrv.elf", command=lambda: execute_socat("payloads/ftpsrv.elf")).grid(row=4, columnspan=2)
 tk.Button(root, text="Send websrv.elf", command=lambda: execute_socat("payloads/websrv.elf")).grid(row=5, columnspan=2)
 tk.Button(root, text="Send etaHEN2.0b.elf", command=lambda: execute_socat("payloads/etaHEN2.0b.elf")).grid(row=6, columnspan=2)
 
+# إضافة خيار لاختيار الملفات
 file_entry = tk.Entry(root, width=40)
 file_entry.grid(row=7, column=0)
 tk.Button(root, text="Browse", command=select_file).grid(row=7, column=1)
 tk.Button(root, text="Send Custom Payload", command=send_payload).grid(row=8, columnspan=2)
 
+# تحميل الإعدادات من الملف (إذا كان موجودًا)
 load_ip_config()
+
 root.mainloop()
